@@ -476,8 +476,72 @@ Recupere el token del tablero ejecutando el siguiente comando en uno de los nodo
 - $ kubectl describe secret -n kube-system ${Dashboard_Secret} |sed -n '$p'|awk '{print $NF}'
 
 -------------------------------------------------------------------------------------------------------------------
+
+Repositories
+Estimated reading time: 5 minutes
+Docker Hub repositories allow you share container images with your team, customers, or the Docker community at large.
+
+Docker images are pushed to Docker Hub through the docker push command. A single Docker Hub repository can hold many Docker images (stored as tags).
+
+Creating repositories
+To create a repository, sign into Docker Hub, click on Repositories then Create Repository:
+
+Create repo
+
+When creating a new repository:
+
+You can choose to put it in your Docker ID namespace, or in any organization where you are an owner.
+
+The repository name needs to be unique in that namespace, can be two to 255 characters, and can only contain lowercase letters, numbers or - and _.
+
+The description can be up to 100 characters and is used in the search result.
+
+You can link a GitHub or Bitbucket account now, or choose to do it later in the repository settings.
+
+Setting page for creating a repo
+
+After you hit the Create button, you can start using docker push to push images to this repository.
+
+Pushing a Docker container image to Docker Hub
+To push an image to Docker Hub, you must first name your local image using your Docker Hub username and the repository name that you created through Docker Hub on the web.
+
+You can add multiple images to a repository by adding a specific :<tag> to them (for example docs/base:testing). If it’s not specified, the tag defaults to latest.
+
+Name your local images using one of these methods:
+
+When you build them, using docker build -t <hub-user>/<repo-name>[:<tag>]
+
+By re-tagging an existing local image docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]
+
+By using docker commit <existing-container> <hub-user>/<repo-name>[:<tag>] to commit changes
+
+Now you can push this repository to the registry designated by its name or tag.
+
+$ docker push <hub-user>/<repo-name>:<tag>
+The image is then uploaded and available for use by your teammates and/or the community.
+
+Private repositories
+Private repositories let you keep container images private, either to your own account or within an organization or team.
+
+To create a private repository, select Private when creating a repository:
+
+Create Private Repo
+
+You can also make an existing repository private by going to its Settings tab:
+
+Convert Repo to Private
+
+You get one private repository for free with your Docker Hub user account (not usable for organizations you’re a member of). If you need more private repositories for your user account, upgrade your Docker Hub plan from your Billing Information page.
+
+Once the private repository is created, you can push and pull images to and from it using Docker.
+
+Note: You need to be signed in and have access to work with a private repository.
+
+Note: Private repositories are not currently available to search through the top-level search or docker search.
+
+You can designate collaborators and manage their access to a private repository from that repository’s Settings page. You can also toggle the repository’s status between public and private, if you have an available repository slot open. Otherwise, you can upgrade your Docker Hub plan.
 #DOCUMENTACION ADICIONAL FINAL DE LOS COMANDOS UTILIZADOS 
-#COMANDOS PARA VER LAS IMAGENES DE DOCKER SELLECIONAR UNA SUBIRLA AL REPOSITORIO 
+#COMANDOS PARA VER LAS IMAGENES DE DOCKER, SELECIONAR UNA SUBIRLA AL REPOSITORIO 
 ```
 docker images
 docker commit -m "Example" a426516eef96 jpoou/my-repo:lastest
@@ -503,7 +567,7 @@ kubectl get nodes
 vi local.yaml 
 kubectl create -f local.yaml 
 ```
-#VER LOS PODS ESTADO, SEGUNDO COMANDO PARA VER LA DEACRIPCION DEL POD 
+#VER LOS PODS ESTADO, SEGUNDO COMANDO PARA VER LA DESCRIPCION DEL POD 
 ```
 kubectl get pods
 kubectl describe pod operativos-final
