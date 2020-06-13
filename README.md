@@ -8,7 +8,7 @@
 - Juan Carlos Morales
 
 # [Video de video fase ll](https://drive.google.com/file/d/1QIBtmcpz4nUmnjN4U68KInV0pJU6wXx9/view?usp=sharing)
-# [Video Fase Final ](https://umgt-my.sharepoint.com/:v:/g/personal/jherreram6_miumg_edu_gt/ETS1x344IqFMm6Pv0KHysgIB15PdXsx0btgtn3taps4iRw?e=7RcYmB)
+# [Video Fase Final ](https://umgt-my.sharepoint.com/:v:/g/personal/jherreram6_miumg_edu_gt/ETS1x344IqFMm6Pv0KHysgIB15PdXsx0btgtn3taps4iRw?e=7RcYmB)(AL FINAL DE ESTE DOCUMENTO SE ENCUENTRAN LOS COMANDOS UTILIZADOS PARA EL VIDEO FINAL)
 
 
 # Kubernetes Cluster
