@@ -3,7 +3,7 @@
 
 - Jose Lopez 
 - Silvia Lopez
-- Jairo Herrera
+- Jairon Herrera
 - Rony Cifuentes
 - Juan Carlos Morales
 
