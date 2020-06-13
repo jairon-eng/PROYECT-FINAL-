@@ -504,4 +504,4 @@ kubectl create -f local.yaml
 kubectl get pods
 kubectl describe pod operativos-final
 kubectl get pods
-
+M
