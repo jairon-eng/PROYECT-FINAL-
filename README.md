@@ -7,7 +7,8 @@
 - Rony Cifuentes
 - Juan Carlos Morales
 
-# [Video de lo realizado](https://drive.google.com/file/d/1QIBtmcpz4nUmnjN4U68KInV0pJU6wXx9/view?usp=sharing)
+# [Video de video fase ll](https://drive.google.com/file/d/1QIBtmcpz4nUmnjN4U68KInV0pJU6wXx9/view?usp=sharing)
+# [Video Fase Final ](https://umgt-my.sharepoint.com/:v:/g/personal/jherreram6_miumg_edu_gt/ETS1x344IqFMm6Pv0KHysgIB15PdXsx0btgtn3taps4iRw?e=7RcYmB)
 
 
 # Kubernetes Cluster
@@ -494,11 +495,11 @@ DOCKER_PASSWORD=password
 #COMANDO QUE CREA UN CODIGO PARA PODER CONECTARSE AL REPOSITORIO PRIVADO DE DOCKER HUB
 ```
 kubectl create secret docker-registry myregistrykey   --docker-server=$DOCKER_REGISTRY_SERVER   --docker-username=$DOCKER_USER   --docker-password=$DOCKER_PASSWORD   --docker-email=$DOCKER_EMAIL
+```
 #COMANDO PARA VER LOS NODES, EL NOMBRE DEL REPOSITORIO ENTRE OTROS
+#CREACION DE ARCHIVO YAML DONDE ESTA LA CONFIGURACION DE NUESTRO REPOSITORIO 
 ```
 kubectl get nodes
-@CREACION DE ARCHIVO YAML DONDE ESTA LA CONFIGURACION DE NUESTRO REPOSITORIO 
-```
 vi local.yaml 
 kubectl create -f local.yaml 
 ```
