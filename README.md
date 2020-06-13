@@ -1,4 +1,4 @@
-# DOCUMENTACION FASE ll Ya entregada 
+# DOCUMENTACION FASE ll Ya entregada Y HASTA ABAJO PARTE lll FINAL
 # Integrantes del grupo 
 
 - Jose Lopez 
@@ -473,3 +473,31 @@ Recupere el token del tablero ejecutando el siguiente comando en uno de los nodo
 
 - $ Dashboard_Secret=`kubectl get secret -n kube-system|grep kubernetes-dashboard-token|awk '{print $1}'`
 - $ kubectl describe secret -n kube-system ${Dashboard_Secret} |sed -n '$p'|awk '{print $NF}'
+
+-------------------------------------------------------------------------------------------------------------------
+#DOCUMENTACION ADICIONAL FINAL DE LOS COMANDOS UTILIZADOS 
+#COMANDOS PARA VER LAS IMAGENES DE DOCKER SELLECIONAR UNA SUBIRLA AL REPOSITORIO 
+docker images
+docker commit -m "Example" a426516eef96 jpoou/my-repo:lastest
+docker login
+docker push jpoou/my-repo:lastest
+
+
+#COMANDOS PARA CREAR UN SECRETO CON LAS CREDENCIALES DEL DOCKER HUB
+DOCKER_REGISTRY_SERVER=docker.io
+DOCKER_USER=user_name
+DOCKER_EMAIL=micorreo@hotmail.com
+DOCKER_PASSWORD=password
+
+#COMANDO QUE CREA UN CODIGO PARA PODER CONECTARSE AL REPOSITORIO PRIVADO DE DOCKER HUB
+kubectl create secret docker-registry myregistrykey   --docker-server=$DOCKER_REGISTRY_SERVER   --docker-username=$DOCKER_USER   --docker-password=$DOCKER_PASSWORD   --docker-email=$DOCKER_EMAIL
+#COMANDO PARA VER LOS NODES, EL NOMBRE DEL REPOSITORIO ENTRE OTROS 
+kubectl get nodes
+@CREACION DE ARCHIVO YAML DONDE ESTA LA CONFIGURACION DE NUESTRO REPOSITORIO 
+vi local.yaml 
+kubectl create -f local.yaml 
+#VER LOS PODS ESTADO, SEGUNDO COMANDO PARA VER LA DEACRIPCION DEL POD 
+kubectl get pods
+kubectl describe pod operativos-final
+kubectl get pods
+
