@@ -490,13 +490,17 @@ DOCKER_EMAIL=micorreo@hotmail.com
 DOCKER_PASSWORD=password
 
 #COMANDO QUE CREA UN CODIGO PARA PODER CONECTARSE AL REPOSITORIO PRIVADO DE DOCKER HUB
+´´´
 kubectl create secret docker-registry myregistrykey   --docker-server=$DOCKER_REGISTRY_SERVER   --docker-username=$DOCKER_USER   --docker-password=$DOCKER_PASSWORD   --docker-email=$DOCKER_EMAIL
-#COMANDO PARA VER LOS NODES, EL NOMBRE DEL REPOSITORIO ENTRE OTROS 
+#COMANDO PARA VER LOS NODES, EL NOMBRE DEL REPOSITORIO ENTRE OTROS
+´´´
 kubectl get nodes
 @CREACION DE ARCHIVO YAML DONDE ESTA LA CONFIGURACION DE NUESTRO REPOSITORIO 
+```
 vi local.yaml 
 kubectl create -f local.yaml 
 #VER LOS PODS ESTADO, SEGUNDO COMANDO PARA VER LA DEACRIPCION DEL POD 
+```
 kubectl get pods
 kubectl describe pod operativos-final
 kubectl get pods
